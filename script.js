@@ -1,10 +1,8 @@
-const sidebar = document.getElementById("sidebar");
-const closeBtn = document.getElementById("closeBtn");
+document.addEventListener("DOMContentLoaded", () => {
+    const sidebar = document.querySelector(".sidebar");
+    const toggleBtn = document.querySelector(".list-icon"); // tombol kotak
 
-closeBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("minimized");
-
-    // Ganti ikon
-    closeBtn.textContent =
-        sidebar.classList.contains("minimized") ? "⮞" : "⮜";
+    toggleBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("minimized");
+    });
 });
